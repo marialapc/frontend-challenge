@@ -1,4 +1,14 @@
-.title{
-  color: red;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
 }
 
