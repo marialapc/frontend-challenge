@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import '../styles/App.scss'; 
 
 function App() {
   const [names, setNames] = useState([]);
@@ -23,18 +24,17 @@ function App() {
         });
     }, []);
     
-
   return (
-    <div>
-      
-      <ul>
-        {names.map((character)=> (
-<li key={character.id}>{character.name}</li>
-        ))}
-
-      </ul>
-    </div>
-  )};
+    <body>
+    <select defaultValue="">
+      <option value="" disabled>State</option>
+      {names.map((character) => (
+        <option key={character.id}>{character.name}</option>
+      ))}
+    </select>
+  </body>
+);
+}
 
 
 export default App;
