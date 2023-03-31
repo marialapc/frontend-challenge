@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 function App() {
+  const [names, setNames] = useState([]);
+
+  useEffect(()=>{
 
     fetch('https://rickandmortyapi.com/api/character')
         .then((response) => response.json())
@@ -11,21 +14,24 @@ function App() {
               name: character.name,
             };
           });
-          return cleanData.sort((a, b) => {
-            console.log(cleanData);
-            if (a.name > b.name) return 1
-            if (a.name < b.name) return -1
-            return 0
-          
+          const sortedData = cleanData.sort((a, b) => {
+            if (a.name > b.name) return 1;
+            if (a.name < b.name) return -1;
+            return 0;
           });
+          setNames(sortedData);
         });
+    }, []);
     
 
   return (
     <div>
       
       <ul>
-          <li></li>
+        {names.map((character)=> (
+<li key={character.id}>{character.name}</li>
+        ))}
+
       </ul>
     </div>
   )};
