@@ -1,16 +1,19 @@
-import "../styles/App.scss";
-const StatesList = ({ names }) => {
-  return (
+import "../styles/StateList.scss";
 
-     
-    <ul className="list">
-        State
+
+const StatesList = ({ names }) => {
+
+
+  return (
+     <>
+    <ul className="list hide" id="state-list">
       {names.map((character) => (
-        <li key={character.id} value={character.id}>
+        <li className="list__element" key={character.id} value={character.id}>
           {character.name}
         </li>
       ))}
     </ul>
+    </>
   );
 };
 

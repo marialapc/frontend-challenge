@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import getDataFromApi from "../services/api";
 import "../styles/App.scss";
 import StatesList from "./StatesList";
+import StateButton from "./StateButton";
 
 function App() {
   const [names, setNames] = useState([]);
@@ -12,7 +13,12 @@ function App() {
     });
   }, []);
 
-  return <StatesList names={names} />;
-}
+  return (
+    <>
+  <StateButton  />
+ <StatesList names={names} />
+ </>
+
+);}
 
 export default App;
