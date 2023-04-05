@@ -1,14 +1,17 @@
-const StatesList = ({names}) => {
-  
-    return (
-        <select defaultValue="">
-         <option value="" disabled>State</option>
-         {names.map((character) => (
-          <option key={character.id} value={character.id}>{character.name}</option>
-       ))}
-      </select>
-    
-    );
-         };
+import "../styles/App.scss";
+const StatesList = ({ names }) => {
+  return (
+
+     
+    <ul className="list">
+        State
+      {names.map((character) => (
+        <li key={character.id} value={character.id}>
+          {character.name}
+        </li>
+      ))}
+    </ul>
+  );
+};
 
 export default StatesList;
