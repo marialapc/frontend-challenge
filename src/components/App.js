@@ -6,7 +6,7 @@ import StateButton from "./StateButton";
 
 function App() {
   const [names, setNames] = useState([]);
-
+  
   useEffect(() => {
     getDataFromApi().then((data) => {
       setNames(data);
