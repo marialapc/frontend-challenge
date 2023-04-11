@@ -1,18 +1,17 @@
+.state-list {
+  overflow: scroll;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  font-family: sans-serif;
 
-.state-list{
-    overflow: scroll;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    gap:10px;
+  &__element {
     font-size: 18px;
-    font-family: sans-serif;
-
-   &__element{
-    font-size: 18px;
-    };
   }
+}
 
-  .hide{
-    // display: none;
-  }
+//    .hide {
+//      display: none;
+//  }
