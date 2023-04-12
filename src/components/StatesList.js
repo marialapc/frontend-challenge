@@ -2,11 +2,11 @@ import "../styles/StateList.scss";
 
 const StatesList = ({ names }) => {
 
-  const hide = 'hidden';
-  
+  const hideList = 'hidden';
+
   return (
     <>
-      <ul className={`state-list ${hide}` }  id="state-list" >
+      <ul className={`state-list ${hideList}` }  id="state-list" >
         {names.map((character) => (
           <li className="list__element" key={character.id} value={character.id}>
             {character.name}

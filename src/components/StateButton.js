@@ -1,14 +1,12 @@
 import "../styles/StateButton.scss";
 
 const StateButton = () => {
-    
-  const hideList = () => {
-
-  };
-
+    const toggleHideList = (ev) => {
+      console.log('click')
+    }
   return (
     <>
-      <button className="state-button" onClick={hideList()}>
+      <button className="state-button" onClick={toggleHideList}>
         State
       </button>
     </>
