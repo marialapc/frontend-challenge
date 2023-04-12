@@ -1,4 +1,5 @@
- [
+ {
+  "states": [
     {
       "id": "AL",
       "name": "Alabama"
@@ -156,3 +157,4 @@
       "name": "Pennsylvania"
     } 
   ] 
+}
