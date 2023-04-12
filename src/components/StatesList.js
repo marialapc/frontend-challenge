@@ -1,15 +1,18 @@
 import "../styles/StateList.scss";
 
-const StatesList = ({ names }) => {
-
- let hideList = 'hidden';
+const StatesList = ( props ) => {
 
   return (
     <>
-      <ul className={`stateList ${hideList}` }  id="stateList" >
-        {names.map((character) => (
-          <li className="stateList__element" key={character.id} value={character.id}>
-            {character.name}
+  <ul className={`stateList ${props.hideList}`} id="stateList">
+        {props.names.map((state) => (
+          <li
+            className="stateList__element"
+            key={state.id}
+            value={state.id}
+            onClick={() => {props.setSelectedState(state.name); props.setHideList('hidden')}}
+          >
+            {state.name}
           </li>
         ))}
       </ul>

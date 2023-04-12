@@ -3,13 +3,13 @@ import getDataFromApi from "../services/api";
 import "../styles/App.scss";
 import "../styles/StateButton.scss";
 import "../styles/StateList.scss";
-// import StatesList from "./StatesList";
- import StateButton from "./StateButton";
+import StatesList from "./StatesList";
+import StateButton from "./StateButton";
 
 function App() {
   const [names, setNames] = useState([]);
   const [hideList, setHideList] = useState("hidden");
-  const [selectedState, setSelectedState] = useState('State');
+  const [selectedState, setSelectedState] = useState("State");
 
   useEffect(() => {
     getDataFromApi().then((data) => {
@@ -17,25 +17,20 @@ function App() {
     });
   }, []);
 
-
-
   return (
     <>
-        <StateButton  hideList={hideList} setHideList={setHideList} selectedState={selectedState}/> 
+      <StateButton
+        hideList={hideList}
+        setHideList={setHideList}
+        selectedState={selectedState}
+      />
 
-      {/* <StatesList names={names} />  */}
-      <ul className={`stateList ${hideList}`} id="stateList">
-        {names.map((state) => (
-          <li
-            className="stateList__element"
-            key={state.id}
-            value={state.id}
-            onClick={() => {setSelectedState(state.name); setHideList('hidden')}}
-          >
-            {state.name}
-          </li>
-        ))}
-      </ul>
+      <StatesList
+        names={names}
+        hideList={hideList}
+        setHideList={setHideList}
+        setSelectedState={setSelectedState}
+      />
     </>
   );
 }
