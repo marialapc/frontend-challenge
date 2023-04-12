@@ -9,7 +9,10 @@ const StatesList = (props) => {
             className="stateList__element"
             key={state.id}
             value={state.id}
-            onClick={() => {props.setSelectedState(state.name); props.setHideList("hidden");}}
+            onClick={() => {
+              props.setSelectedState(state.name);
+              props.setHideList("hidden");
+            }}
           >
             {state.name}
           </li>
