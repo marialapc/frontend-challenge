@@ -2,7 +2,7 @@ import "../styles/StateList.scss";
 
 const StatesList = ({ names }) => {
 
-  const hideList = 'hidden';
+ let hideList = 'hidden';
 
   return (
     <>
