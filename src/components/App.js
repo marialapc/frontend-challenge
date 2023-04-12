@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import getDataFromApi from "../services/api";
 import "../styles/App.scss";
-import "../styles/StateButton.scss";
-import "../styles/StateList.scss";
 import StatesList from "./StatesList";
 import StateButton from "./StateButton";
 
