@@ -6,7 +6,7 @@ const StateButton = () => {
     }
   return (
     <>
-      <button className="state-button" onClick={toggleHideList}>
+      <button className="stateButton" onClick={toggleHideList}>
         State
       </button>
     </>

@@ -6,9 +6,9 @@ const StatesList = ({ names }) => {
 
   return (
     <>
-      <ul className={`state-list ${hideList}` }  id="state-list" >
+      <ul className={`stateList ${hideList}` }  id="stateList" >
         {names.map((character) => (
-          <li className="list__element" key={character.id} value={character.id}>
+          <li className="stateList__element" key={character.id} value={character.id}>
             {character.name}
           </li>
         ))}
