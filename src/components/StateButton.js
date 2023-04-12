@@ -2,7 +2,7 @@ import "../styles/StateButton.scss";
 
 const StateButton = () => {
     const toggleHideList = (ev) => {
-      console.log('click')
+    
     }
   return (
     <>

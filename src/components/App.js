@@ -26,9 +26,12 @@ function App() {
 
   return (
     <>
+       {/* <StateButton /> */}
       <button className="state-button" onClick={toggleHideList}>
         State
       </button>
+      
+      {/* <StatesList names={names} />  */}
       <ul className={`stateList ${hideList}`} id="state-list">
         {names.map((character) => (
           <li
@@ -40,9 +43,6 @@ function App() {
           </li>
         ))}
       </ul>
-
-      {/* <StateButton />
-      <StatesList names={names} /> */}
     </>
   );
 }
