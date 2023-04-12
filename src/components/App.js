@@ -5,6 +5,7 @@ import "../styles/StateButton.scss";
 import "../styles/StateList.scss";
 // import StatesList from "./StatesList";
 // import StateButton from "./StateButton";
+import arrow from "../assets/arrowDown.png.png"
 
 function App() {
   const [names, setNames] = useState([]);
@@ -25,17 +26,15 @@ function App() {
     }
   };
 
-  const SelectState = (ev) => {
-    setSelectedState('holi')
 
-  }
 
   return (
     <>
        {/* <StateButton /> */}
-      <button className="state-button" onClick={toggleHideList}>
-       {selectedState}
+      <button className="stateButton" onClick={toggleHideList}>
+       {selectedState} <p>⬇️</p>
       </button>
+   
       
       {/* <StatesList names={names} />  */}
       <ul className={`stateList ${hideList}`} id="stateList">
@@ -44,7 +43,7 @@ function App() {
             className="stateList__element"
             key={character.id}
             value={character.id}
-            onClick={SelectState}
+            onClick={() => {setSelectedState(character.name); setHideList('hidden')}}
           >
             {character.name}
           </li>

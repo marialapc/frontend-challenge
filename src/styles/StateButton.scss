@@ -1,7 +1,12 @@
 .stateButton{
     width:250px;
+    height: 30px;
     font-size: 18px;
     text-align: left;
     background-color: rgb(255, 255, 255);
-    border: 1px solid black;
+    border: 3px solid rgb(73, 152, 255);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
