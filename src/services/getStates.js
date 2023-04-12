@@ -13,12 +13,16 @@ const sortData = (states) => {
   });
 }
 
-const getDataFromApi = () => {
-  return import("../data/states.json").then(({ states }) => {
+const getStates = () => {
+  return import("../data/states.json")
+  .then(({ states }) => {
     const cleanStates = cleanData(states);
     const sortedStates = sortData(cleanStates);
     return sortedStates;
-  });
+  })
+  .catch( (error) => {
+   console.error(error)
+  })
 };
 
-export default getDataFromApi;
+export default getStates;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import StatesList from "./StateList/StatesList";
 import StateButton from "./StateButton/StateButton";
-import getDataFromApi from "../services/api";
+import getStates from "../services/getStates";
 
 const StateSearcher = () => {
   const [states, setStates] = useState([]);
@@ -9,7 +9,7 @@ const StateSearcher = () => {
   const [selectedState, setSelectedState] = useState("State");
 
   useEffect(() => {
-    getDataFromApi().then((data) => {
+    getStates().then((data) => {
       setStates(data);
     });
   }, []);
