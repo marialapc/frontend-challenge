@@ -4,8 +4,7 @@ import "../styles/App.scss";
 import "../styles/StateButton.scss";
 import "../styles/StateList.scss";
 // import StatesList from "./StatesList";
-// import StateButton from "./StateButton";
-import arrow from "../assets/arrowDown.png.png"
+ import StateButton from "./StateButton";
 
 function App() {
   const [names, setNames] = useState([]);
@@ -18,34 +17,22 @@ function App() {
     });
   }, []);
 
-  const toggleHideList = (ev) => {
-    if (hideList === "hidden") {
-      setHideList("");
-    } else {
-      setHideList("hidden");
-    }
-  };
-
 
 
   return (
     <>
-       {/* <StateButton /> */}
-      <button className="stateButton" onClick={toggleHideList}>
-       {selectedState} <p>⬇️</p>
-      </button>
-   
-      
+        <StateButton  hideList={hideList} setHideList={setHideList} selectedState={selectedState}/> 
+
       {/* <StatesList names={names} />  */}
       <ul className={`stateList ${hideList}`} id="stateList">
-        {names.map((character) => (
+        {names.map((state) => (
           <li
             className="stateList__element"
-            key={character.id}
-            value={character.id}
-            onClick={() => {setSelectedState(character.name); setHideList('hidden')}}
+            key={state.id}
+            value={state.id}
+            onClick={() => {setSelectedState(state.name); setHideList('hidden')}}
           >
-            {character.name}
+            {state.name}
           </li>
         ))}
       </ul>

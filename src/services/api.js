@@ -1,11 +1,14 @@
+//  '../data/states.json'
+
 const getDataFromApi = () => {
   return fetch("https://rickandmortyapi.com/api/character")
     .then((response) => response.json())
     .then((data) => {
-      const cleanData = data.results.map((character) => {
+      console.log(data)
+      const cleanData = data.results.map((state) => {
         return {
-          id: character.id,
-          name: character.name,
+          id: state.id,
+          name: state.name,
         };
       });
       return cleanData.sort((a, b) => {
