@@ -1,13 +1,9 @@
 import "./StateButton.scss";
 
-const StateButton = ({ selectedState, onClick }) => {
-
+const StateButton = ({ onClick }) => {
   return (
-    <button
-      className="stateButton"
-      onClick={onClick}
-    >
-    <p>⬇️</p>
+    <button className="stateButton" onClick={onClick}>
+      <p>⬇️</p>
     </button>
   );
 };

@@ -30,7 +30,7 @@ const StateSearcher = () => {
     <>
     <div className="searchBar">
       <StateInput selectedState={selectedState} />
-      <StateButton  onClick={onHideList} />
+      <StateButton onClick={onHideList} />
     </div>
    <StatesList states={states} hideList={hideList} onClick={onSelectState} />
     </>
