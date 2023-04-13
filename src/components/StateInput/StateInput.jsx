@@ -1,9 +1,9 @@
 import "./StateInput.scss";
 
-const StateInput = ({ selectedState }) => {
+const StateInput = ({ selectedState, onInput }) => {
 
   return (
-<input className="stateInput" type="text" placeholder={selectedState} />
+<input className="stateInput" type="text" placeholder={selectedState} onInput={onInput}/>
   );
 };
 

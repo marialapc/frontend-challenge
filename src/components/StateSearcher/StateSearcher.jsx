@@ -26,10 +26,14 @@ const StateSearcher = () => {
     setHideList("hidden");
   };
 
+  const onFilter = () =>{
+  
+  }
+
   return (
     <>
     <div className="searchBar">
-      <StateInput selectedState={selectedState} />
+      <StateInput selectedState={selectedState} onInput={onFilter} />
       <StateButton onClick={onHideList} />
     </div>
    <StatesList states={states} hideList={hideList} onClick={onSelectState} />
