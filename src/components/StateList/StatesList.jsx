@@ -1,11 +1,11 @@
 import "./StateList.scss";
 
-const StatesList = ({ states, hideList, onClick }) => {
+const StatesList = ({ filteredList, hideList, onClick }) => {
   return (
     <ul id="stateList"
       className={`stateList ${hideList}`}
     >
-      { states.map((state) => (
+      { filteredList.map((state) => (
         <li
           className="stateList__element"
           key={state.id}

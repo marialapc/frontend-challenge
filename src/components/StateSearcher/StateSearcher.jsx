@@ -10,12 +10,18 @@ const StateSearcher = () => {
   const [states, setStates] = useState([]);
   const [hideList, setHideList] = useState("hidden");
   const [selectedState, setSelectedState] = useState("State");
+  const [ filteredStates, setFilteredStates] = useState("");
 
   useEffect(() => {
     getStates().then((data) => {
       setStates(data);
     });
   }, []);
+
+  
+ const filteredList = states.filter((state) =>
+ state.name.toLowerCase().includes(filteredStates.toLowerCase())
+);
 
   const onHideList = () => {
     setHideList(hideList === "hidden" ? "" : "hidden");
@@ -26,9 +32,15 @@ const StateSearcher = () => {
     setHideList("hidden");
   };
 
-  const onFilter = () =>{
+  const handleFilterState = (value) => {
+    setFilteredStates(value);
+  };
+
+  const onFilter = (event) => { 
+      handleFilterState(event.target.value);
+      setHideList('');
+    };
   
-  }
 
   return (
     <>
@@ -36,7 +48,7 @@ const StateSearcher = () => {
       <StateInput selectedState={selectedState} onInput={onFilter} />
       <StateButton onClick={onHideList} />
     </div>
-   <StatesList states={states} hideList={hideList} onClick={onSelectState} />
+   <StatesList filteredList={filteredList} hideList={hideList} onClick={onSelectState} />
     </>
   );
 };
