@@ -7,7 +7,7 @@ const StateButton = ({ selectedState, onClick }) => {
       className="stateButton"
       onClick={onClick}
     >
-      { selectedState } <p>⬇️</p>
+    <p>⬇️</p>
     </button>
   );
 };

@@ -3,6 +3,7 @@ import StateInput from "../StateInput/StateInput"
 import StatesList from "../StateList/StatesList";
 import StateButton from "../StateButton/StateButton";
 import getStates from "../../services/getStates";
+import "./StateSearcher.scss"
 
 
 const StateSearcher = () => {
@@ -27,11 +28,11 @@ const StateSearcher = () => {
 
   return (
     <>
-      <StateInput />
-      
-      <StateButton selectedState={selectedState} onClick={onHideList} />
-
-      <StatesList states={states} hideList={hideList} onClick={onSelectState} />
+    <div className="searchBar">
+      <StateInput selectedState={selectedState} />
+      <StateButton  onClick={onHideList} />
+    </div>
+   <StatesList states={states} hideList={hideList} onClick={onSelectState} />
     </>
   );
 };
