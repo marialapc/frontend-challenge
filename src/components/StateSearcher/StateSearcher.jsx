@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import StatesList from "./StateList/StatesList";
-import StateButton from "./StateButton/StateButton";
-import getStates from "../services/getStates";
+import StateInput from "../StateInput/StateInput"
+import StatesList from "../StateList/StatesList";
+import StateButton from "../StateButton/StateButton";
+import getStates from "../../services/getStates";
+
 
 const StateSearcher = () => {
   const [states, setStates] = useState([]);
@@ -25,6 +27,8 @@ const StateSearcher = () => {
 
   return (
     <>
+      <StateInput />
+      
       <StateButton selectedState={selectedState} onClick={onHideList} />
 
       <StatesList states={states} hideList={hideList} onClick={onSelectState} />

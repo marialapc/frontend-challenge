@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/App.scss";
-import StateSearcher from "./StateSearcher";
+import "../App/App.scss";
+import StateSearcher from "../StateSearcher/StateSearcher";
 
 function App() {
 
