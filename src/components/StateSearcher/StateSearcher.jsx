@@ -8,7 +8,7 @@ import "./StateSearcher.scss";
 const StateSearcher = () => {
   const [states, setStates] = useState([]);
   const [hideList, setHideList] = useState("hidden");
-  const [selectedState, setSelectedState] = useState("State");
+  const [selectedState, setSelectedState] = useState("");
   const [filteredStates, setFilteredStates] = useState("");
 
   useEffect(() => {
@@ -23,6 +23,7 @@ const StateSearcher = () => {
 
   const onHideList = () => {
     setHideList(hideList === "hidden" ? "" : "hidden");
+    setFilteredStates('');
   };
 
   const onSelectState = (state) => {
@@ -36,7 +37,8 @@ const StateSearcher = () => {
 
   const onFilter = (event) => {
     handleFilter(event.target.value);
-    setHideList("");
+    setHideList('');
+    setSelectedState(onkeyup);
   };
 
   return (

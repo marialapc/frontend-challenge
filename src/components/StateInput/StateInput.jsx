@@ -5,8 +5,9 @@ const StateInput = ({ selectedState, onInput }) => {
     <input
       className="stateInput"
       type="text"
-      placeholder={selectedState}
+      placeholder="State"
       onInput={onInput}
+      value={selectedState}
     />
   );
 };
