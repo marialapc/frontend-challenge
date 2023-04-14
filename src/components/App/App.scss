@@ -10,36 +10,41 @@
 }
 
 html,
-body {
+body,
+.root,
+.main {
   height: 100%;
 }
 
-.main{
+body {
+ font-size: 16px;
+}
+
+.main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
-  align-items:center;
-  margin-right: 580px;
-  margin-top: -300px;
+  align-items: center;
+  margin-top: -10rem;
+  
 }
 
-.title{
+.title {
   margin-bottom: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(201, 7, 7);
-  margin-top: 200px;
-}
-
-.image{
-  height: 600px;
-  margin-left: 100px;
-  margin-top: 113px;
 
 }
 
+.image {
+  position: fixed;
+  left: 5rem;
+  bottom: 0;
+  height: 40rem;
+}

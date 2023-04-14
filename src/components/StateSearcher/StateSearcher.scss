@@ -1,6 +1,8 @@
-.searchBar {
+.search-bar {
+  position: relative;
   display: flex;
-  width: 235px;
+  width: 14.68rem;
+  margin-top: 3.12rem;
   border: 2.5px solid rgb(73, 152, 255);
-  margin-top: 50px;
+  font-size: var(--secondary-font-size);
 }

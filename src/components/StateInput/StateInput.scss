@@ -1,11 +1,11 @@
-.stateInput {
+.state-input {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: left;
-  width: 200px;
-  height: 30px;
-  font-size: 18px;
+  width: calc(100% - var(--button-size));
+  height: 1.87rem;
+  font-size: inherit;
   background-color: rgb(255, 255, 255);
   border: none;
   outline: none;

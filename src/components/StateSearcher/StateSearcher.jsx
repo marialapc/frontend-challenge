@@ -23,7 +23,7 @@ const StateSearcher = () => {
 
   const onHideList = () => {
     setHideList(hideList === "hidden" ? "" : "hidden");
-    setFilteredStates('');
+    setFilteredStates("");
   };
 
   const onSelectState = (state) => {
@@ -37,22 +37,20 @@ const StateSearcher = () => {
 
   const onFilter = (event) => {
     handleFilter(event.target.value);
-    setHideList('');
+    setHideList("");
     setSelectedState(onkeyup);
   };
 
   return (
-    <>
-      <div className="searchBar">
-        <StateInput selectedState={selectedState} onInput={onFilter} />
-        <StateButton onClick={onHideList} />
-      </div>
+    <div className="search-bar">
+      <StateInput selectedState={selectedState} onInput={onFilter} />
+      <StateButton onClick={onHideList} />
       <StatesList
         filteredList={filteredList}
         hideList={hideList}
         onClick={onSelectState}
       />
-    </>
+    </div>
   );
 };
 

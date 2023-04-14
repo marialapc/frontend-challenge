@@ -2,7 +2,7 @@ import "./StateButton.scss";
 
 const StateButton = ({ onClick }) => {
   return (
-    <button className="stateButton" onClick={onClick}>
+    <button className="state-button" onClick={onClick}>
       <p>⬇️</p>
     </button>
   );

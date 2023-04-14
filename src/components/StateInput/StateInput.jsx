@@ -3,7 +3,7 @@ import "./StateInput.scss";
 const StateInput = ({ selectedState, onInput }) => {
   return (
     <input
-      className="stateInput"
+      className="state-input"
       type="text"
       placeholder="State"
       onInput={onInput}

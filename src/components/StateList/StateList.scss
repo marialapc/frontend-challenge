@@ -1,15 +1,16 @@
-.stateList {
+.state-list {
+  position: absolute;
+  top: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  height: 250px;
-  overflow: scroll;
+  gap: 0.6rem;
+  height: 15.62rem;
+  width: 100%;
+  overflow-y: auto;
   font-family: sans-serif;
-  width: 235px;
   background-color: white;
 
   &__element {
-    font-size: 18px;
     cursor: pointer;
   }
 
