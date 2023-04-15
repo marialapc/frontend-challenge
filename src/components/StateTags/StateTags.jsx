@@ -1,9 +1,10 @@
 import "./StateTags.scss";
 
-const StateTags = (selectedState) => {
+const StateTags = ({selectedState}) => {
     return (
       <div className="state-tags" >
-       <p></p>
+        <div className="tag">
+            <p>{selectedState}</p></div>
       </div>
     );
   };

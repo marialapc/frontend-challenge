@@ -43,6 +43,8 @@ const StateSearcher = () => {
     setSelectedState(onkeyup);
   };
 
+  
+
   return (
     <div className="search-bar">
       <StateTags selectedState={selectedState} />
