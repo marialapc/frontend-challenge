@@ -4,12 +4,14 @@ import StatesList from "../StateList/StatesList";
 import StateButton from "../StateButton/StateButton";
 import getStates from "../../services/getStates";
 import "./StateSearcher.scss";
+import StateTags from "../StateTags/StateTags";
 
 const StateSearcher = () => {
   const [states, setStates] = useState([]);
   const [hideList, setHideList] = useState("hidden");
   const [selectedState, setSelectedState] = useState("");
   const [filteredStates, setFilteredStates] = useState("");
+  const [stateTags, setStateTags] = useState([]);
 
   useEffect(() => {
     getStates().then((data) => {
@@ -43,6 +45,7 @@ const StateSearcher = () => {
 
   return (
     <div className="search-bar">
+      <StateTags selectedState={selectedState} />
       <StateInput selectedState={selectedState} onInput={onFilter} />
       <StateButton onClick={onHideList} />
       <StatesList
