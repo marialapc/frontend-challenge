@@ -31,6 +31,7 @@ const StateSearcher = () => {
   const onSelectState = (state) => {
     setSelectedState(state.name);
     setHideList("hidden");
+    setStateTags((oldStateTags) => [...oldStateTags, state]);
   };
 
   const handleFilter = (value) => {
@@ -43,11 +44,9 @@ const StateSearcher = () => {
     setSelectedState(onkeyup);
   };
 
-  
-
   return (
     <div className="search-bar">
-      <StateTags selectedState={selectedState} />
+      <StateTags  stateTags={stateTags} />
       <StateInput selectedState={selectedState} onInput={onFilter} />
       <StateButton onClick={onHideList} />
       <StatesList
