@@ -2,6 +2,9 @@ import "./StateTags.scss";
 
 const StateTags = ({ stateTags = [] }) => {
   console.log(stateTags);
+  if (stateTags.length === 1) {
+    return null;
+  }
   return (
     <div className="state-tags">
       {stateTags.map((state) => (
