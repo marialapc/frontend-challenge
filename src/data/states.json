@@ -155,6 +155,54 @@
     {
       "id": "PA",
       "name": "Pennsylvania"
-    } 
+    },
+    {
+      "id": "RI",
+      "name": "Rhode Island"
+    },
+    {
+      "id": "SC",
+      "name": "South Carolina"
+    },
+    {
+      "id": "SD",
+      "name": "South Dakota"
+    },
+    {
+      "id": "TN",
+      "name": "Tennessee"
+    },
+    {
+      "id": "TX",
+      "name": "Texas"
+    },
+    {
+      "id": "UT",
+      "name": "Utah"
+    },
+    {
+      "id": "VT",
+      "name": "Vermont"
+    },
+    {
+      "id": "VA",
+      "name": "Virginia"
+    },
+    {
+      "id": "WA",
+      "name": "Washington"
+    },
+    {
+      "id": "WV",
+      "name": "West Virginia"
+    },
+    {
+      "id": "WI",
+      "name": "Wisconsin"
+    },
+    {
+      "id": "WY",
+      "name": "Wyoming"
+    }
   ] 
 }
