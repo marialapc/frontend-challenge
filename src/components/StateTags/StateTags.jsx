@@ -16,4 +16,5 @@ const StateTags = ({ stateTags = [] }) => {
   );
 };
 
+
 export default StateTags;

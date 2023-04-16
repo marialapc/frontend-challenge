@@ -46,7 +46,7 @@ const StateSearcher = () => {
 
   return (
     <div className="search-bar">
-      <StateTags  stateTags={stateTags} />
+      <StateTags stateTags={stateTags} />
       <StateInput selectedState={selectedState} onInput={onFilter} />
       <StateButton onClick={onHideList} />
       <StatesList
