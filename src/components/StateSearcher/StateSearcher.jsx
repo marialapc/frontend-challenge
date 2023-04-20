@@ -34,6 +34,7 @@ const StateSearcher = () => {
     setSelectedState(state.name);
     setHideList("hidden");
     setStateTags((oldStateTags) => [...oldStateTags, state]);
+    setDeleteTag("");
   };
 
   const handleFilter = (value) => {
