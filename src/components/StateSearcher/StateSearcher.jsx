@@ -48,12 +48,12 @@ const StateSearcher = () => {
 
   const onDeleteTag = () => {
     console.log("delete tag");
-    setDeleteTag( deleteTag === "deleted");
+    setDeleteTag("deleted");
   };
 
   return (
     <div className="search-bar">
-      <StateTags stateTags={stateTags} onClick={onDeleteTag} />
+      <StateTags stateTags={stateTags} onClick={onDeleteTag} deleteTag={deleteTag} />
       <StateInput selectedState={selectedState} onInput={onFilter} />
       <StateButton onClick={onHideList} />
       <StatesList
