@@ -13,11 +13,14 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.9rem;
     color: rgb(89, 87, 87);
+    display: flex;
+    gap: 0.5em;
   }
   &_button {
     border: none;
     background: none;
     cursor: pointer;
+    margin-right: 0.3em;
   }
 }
 
