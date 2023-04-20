@@ -13,6 +13,7 @@ const StateSearcher = () => {
   const [filteredStates, setFilteredStates] = useState("");
   const [stateTags, setStateTags] = useState([]);
 
+
   useEffect(() => {
     getStates().then((data) => {
       setStates(data);
@@ -44,9 +45,13 @@ const StateSearcher = () => {
     setSelectedState(onkeyup);
   };
 
+  const onDeleteTag = () => {
+    console.log('delete tag');
+  }
+
   return (
     <div className="search-bar">
-      <StateTags stateTags={stateTags} />
+      <StateTags stateTags={stateTags} onclick={onDeleteTag} />
       <StateInput selectedState={selectedState} onInput={onFilter} />
       <StateButton onClick={onHideList} />
       <StatesList
