@@ -12,6 +12,7 @@ const StateSearcher = () => {
   const [selectedState, setSelectedState] = useState("");
   const [filteredStates, setFilteredStates] = useState("");
   const [stateTags, setStateTags] = useState([]);
+  const [deleteTag, setDeleteTag] = useState("");
 
 
   useEffect(() => {
@@ -46,8 +47,9 @@ const StateSearcher = () => {
   };
 
   const onDeleteTag = () => {
-    console.log('delete tag');
-  }
+    console.log("delete tag");
+    setDeleteTag( deleteTag === "deleted");
+  };
 
   return (
     <div className="search-bar">
