@@ -8,9 +8,12 @@ const StateTags = ({ stateTags = [] }) => {
   return (
     <div className="state-tags">
       {stateTags.map((state) => (
-        <p className="tag" key={`state-tag-${state.id}`}>
-          {state.name }x
+        <div className="state-tags_tag">
+        <p  key={`state-tag-${state.id}`}>
+          {state.name }
         </p>
+        <button className="state-tags_button">x</button>
+        </div>
       ))}
     </div>
   );
