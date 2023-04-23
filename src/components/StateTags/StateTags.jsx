@@ -1,6 +1,6 @@
 import "./StateTags.scss";
 
-const StateTags = ({ stateTags = [], onClick, deleteTag }) => {
+const StateTags = ({ stateTags = [], onClick }) => {
   if (stateTags.length === 1) {
     return null;
   }
@@ -8,11 +8,14 @@ const StateTags = ({ stateTags = [], onClick, deleteTag }) => {
     <div className="state-tags">
       {stateTags.map((state) => (
         <div
-          className={`state-tags_tag ${deleteTag}`}
+          className="state-tags_tag"
           key={`state-tag-${state.id}`}
         >
           <p>{state.name}</p>
-          <button className="state-tags_button" onClick={onClick}>
+          <button className="state-tags_button" 
+            onClick={() => {
+              onClick(state) 
+           }}>
             x
           </button>
         </div>

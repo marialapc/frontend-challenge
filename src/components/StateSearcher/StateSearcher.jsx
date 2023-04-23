@@ -3,7 +3,6 @@ import StateInput from "../StateInput/StateInput";
 import StatesList from "../StateList/StatesList";
 import StateButton from "../StateButton/StateButton";
 import getStates from "../../services/getStates";
-import "./StateSearcher.scss";
 import StateTags from "../StateTags/StateTags";
 
 const StateSearcher = () => {
@@ -12,8 +11,6 @@ const StateSearcher = () => {
   const [selectedState, setSelectedState] = useState("");
   const [filteredStates, setFilteredStates] = useState("");
   const [stateTags, setStateTags] = useState([]);
-  const [deleteTag, setDeleteTag] = useState("");
-
 
   useEffect(() => {
     getStates().then((data) => {
@@ -34,7 +31,6 @@ const StateSearcher = () => {
     setSelectedState(state.name);
     setHideList("hidden");
     setStateTags((oldStateTags) => [...oldStateTags, state]);
-    setDeleteTag("");
   };
 
   const handleFilter = (value) => {
@@ -47,14 +43,15 @@ const StateSearcher = () => {
     setSelectedState(onkeyup);
   };
 
-  const onDeleteTag = () => {
-    console.log("delete tag");
-    setDeleteTag("deleted");
+  const onDeleteTag = (clickedState) => {
+    const foundStateIndex = stateTags.findIndex((state) => state.id === clickedState.id);
+    const newStateTags = stateTags.toSpliced(foundStateIndex, 1);
+    setStateTags(newStateTags);
   };
 
   return (
     <div className="search-bar">
-      <StateTags stateTags={stateTags} onClick={onDeleteTag} deleteTag={deleteTag} />
+      <StateTags stateTags={stateTags} onClick={onDeleteTag} />
       <StateInput selectedState={selectedState} onInput={onFilter} />
       <StateButton onClick={onHideList} />
       <StatesList
