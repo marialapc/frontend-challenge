@@ -4,6 +4,7 @@ import StatesList from "../StateList/StatesList";
 import StateButton from "../StateButton/StateButton";
 import getStates from "../../services/getStates";
 import StateTags from "../StateTags/StateTags";
+import "./StateSearcher.scss";
 
 const StateSearcher = () => {
   const [states, setStates] = useState([]);
