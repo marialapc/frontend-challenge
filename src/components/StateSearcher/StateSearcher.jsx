@@ -63,5 +63,4 @@ const StateSearcher = () => {
     </div>
   );
 };
-
 export default StateSearcher;
